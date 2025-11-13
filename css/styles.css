@@ -387,6 +387,7 @@ div.home-creator {
         color: white;
     }
 }
+
 /*creator menu toggle*/
 #hs-l{
     top:15.6%;
@@ -394,6 +395,20 @@ div.home-creator {
     background:none;
 }
 
+/*proficiency edit icon*/
+.hs-m{
+    top:61%;
+    left:93.8%;
+    &:hover{
+        fill: var(--accent-blue);
+    }
+    
+}
+/*proficiency overlay*/
+.hs-n{
+    top:0%;
+    left:0%;
+}
 
 
 /*side menu states*/
