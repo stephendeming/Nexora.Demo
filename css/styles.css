@@ -114,10 +114,6 @@ div.home-creator {
     display:flex;
     flex-direction: row;
 }
-.page-content-wrapper {
-    display:flex;
-    flex-direction: column;
-}
 .page-content {
     display: flex;
     flex-direction: column;
@@ -149,7 +145,8 @@ div.home-creator {
         cursor:pointer;
         background:url("../img/back-arrow.svg") no-repeat left;
         padding-left:2rem;
-  
+
+        
     }
     :hover{
             color: var(--accent-blue);
@@ -246,10 +243,11 @@ div.home-creator {
     height: auto;
 }
 /* Start micro learning button */
-#hs-a {
+.hs-a {
     top: 39%;
     left: 77.9%;
     align-items: center;
+    cursor: pointer;
     
     &:hover{
         background-color: var(--accent-blue);
@@ -266,6 +264,7 @@ div.home-creator {
     top: 8.9%;
     left: 90%;
     align-items: center;
+    cursor: pointer;
     
     &:hover{
         background-color: var(--accent-blue);
@@ -273,10 +272,11 @@ div.home-creator {
     }
 }
 /* Next / Submit buttons */
-#hs-c {
+.hs-c {
     top: 70%;
     left: 85%;
     align-items: center;
+    cursor: pointer;
     
     &:hover{
         background-color: var(--accent-blue);
@@ -438,16 +438,17 @@ div.home-creator {
       z-index: 9999;
     }
 
-/* --- Spinner animation --- */
-.spinner {
-    width: 80px;
-    height: 80px;
-    border: 10px solid #ccc;
-    border-top-color: #09f;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    /* --- Spinner animation --- */
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 10px solid #ccc;
+      border-top-color: #09f;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
     }
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
     }

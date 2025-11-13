@@ -17,13 +17,13 @@
             <img src="img/side-nav-learninghub.svg"  />
         </div>
         
-        <div class="page-content-wrapper">
+        <div style="display:flex; flex-direction:column;">
             <div class="back"><a href="search-results.html">Back to Search Results</a></div>
             
             <div class="page-content">
                 <div class="hotspots">
                     <img src="img/skill-packet-page.svg">
-                    <a href="negotiation.html" class="hotspot" id="hs-a">Start Microlearning<img src="img/right-arrow.svg"></a>
+                    <div id="startMicroBtn" class="hotspot hs-a">Start Microlearning<img src="img/right-arrow.svg"></div>
                 </div> 
                 <!--<img src="img/skill-packet-page.svg" />-->
             </div>
@@ -32,6 +32,30 @@
     </div>
     <div id="footer-container"></div>
     <script src="js/inject.js"></script>
+    <script>
+       $(document).ready(function() {
+
+      $('#startMicroBtn').on('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'negotiation.html'; // Replace with your file
+      });
+    });
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('scrollPos', window.scrollY);
+        });
+
+        // Instantly restore scroll position on load
+        window.addEventListener('load', function() {
+            const scrollPos = sessionStorage.getItem('scrollPos');
+            if (scrollPos !== null) {
+            window.scrollTo({
+                top: parseInt(scrollPos, 10),
+                left: 0,
+                behavior: 'instant' // <— instantly sets position, no scroll animation
+            });
+            }
+        });
+    </script>
     
 
 </body>
