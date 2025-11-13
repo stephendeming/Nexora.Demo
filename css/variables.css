@@ -1,0 +1,83 @@
+:root {
+    --gray-very-light: #eee;
+    --neutral-light: #f8f9fa;
+    --neutral-dark: #222;
+    --primary-blue-dark: #004080;
+    --pagination-bg: #F2F2F2;
+    --gray-title: #313131;
+    --border-gray: #E0E0E0;
+    --white: #FFFFFF;
+    --off-white: #F9F9F9;
+    --status-gray: #7F848B;
+    --border-light: #DFE1E2;
+    --primary-blue: #005EA2;
+    --link-blue: #0071BB;
+    --gray-lightest: #f0f0f0;
+    --gray-lighter:  #e2e2e2;
+    --gray-dark:     #464646;
+    --gray-border-light:   #CCCCCC;
+    --accent-blue:   #2491FF;
+    --gray-label:    #9D9D9D;
+    --gray-menu:     #5C5C5C;
+    --primary-black: #000000;
+    --secondary-black: #1B1B1B;
+    --secondary-blue: #0050D8;
+    --neutral-black: #1B1B1B;
+    --purple-hover: #781A92;
+    --gray-progress: #919191;
+    --gray-progress-active: #7c8d9a;
+    --navy-blue: #162E51;
+    --gray-dragdrop-border: #A9AEB1;
+    --blue-dragdrop-bg: rgba(147, 188, 220, 0.15);
+    --blue-dragdrop-bg-hover: rgba(147, 188, 220, 0.25);
+    --gray-selected-border: #ADADAD;
+    --blue-selected-bg: #D9E8F6;
+    --gray-icon: #555;
+    --gray-search-border: #ced4da;
+    --gray-upload-thumb: #989494;
+    --gray-upload-thumb-bg: #D9D9D9;
+    --dark-gray: #3D3D3D;
+    --light-gray: #333;
+    --blue-level-one: #3893DC;
+    --blue-level-three: #1A5AC8;
+    --blue-level-four: #1A4480;
+    --gray-level-one: #4b4b4b;
+    --gray-dark: #343440;
+    --awareness-blue: #3893cd;
+    --expert-dark-blue: #162E51;
+    --advanced-dark-blue: #1A4480;
+    --intermediate-dark-blue: #1A5AC8;
+    --very-light-green: #c3e6cb;
+    --overdue-content-item: #6B4848;
+    --in-progress-content-item: #565C65;
+    --completed-content-item: #566557;
+    --color-background-muted: #e9ecef;
+    --color-text-muted: #6c757d;
+    --color-accent-green: #28a745;
+    --color-accent-blue: #007bff;
+    --color-success-light: #d4edda;
+    --color-neutral-gray: #495057;
+    --color-neutral-800: #212529;
+    --color-accent-red-very-light: #f8d7da;
+    --color-accent-red-light: #f5c6cb;
+    --color-danger-dark: #721c24;
+    --color-accent-red: #dc3545;
+    --color-danger-light: #fff5f5;
+    --color-success-light: #c3e6cb;
+    --color-success-dark: #155724;
+    
+    /* Begin color updates */
+    --alert-red: #B50909;
+    --progress-green: #154C21;
+    --approved-green: #008817;
+    --pending-brown: #C2850C;
+    --incomplete-orange: #CF4900;
+    --draft-gray: #71767A;
+    --loading-gray:#3D4551;
+    --error-red: #D32F2F;
+    --error-red-light: #FFEBEE;
+    
+    
+
+     
+}
