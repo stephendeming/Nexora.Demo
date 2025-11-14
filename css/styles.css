@@ -409,6 +409,12 @@ div.home-creator {
     top:0%;
     left:0%;
 }
+/*creator role to supervisor*/
+.hs-o{
+    top:1%;
+    left:4%;
+}
+
 
 
 /*side menu states*/
@@ -428,6 +434,7 @@ div.home-creator {
     gap:.8rem;
     margin: 2rem 0 2rem 0
 }
+
 
 .svg-nav-item{
     fill:#5c5c5c;

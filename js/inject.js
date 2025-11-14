@@ -9,6 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("footer-container").innerHTML = footerHTML;
   }
 
+  // Inject creator nav
+  if (typeof navCreatorHTML !== "undefined") {
+    document.getElementById("nav-creator").innerHTML = navCreatorHTML;
+  }
+
 });
 
 
