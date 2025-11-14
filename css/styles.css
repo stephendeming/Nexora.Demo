@@ -224,20 +224,13 @@ div.home-creator {
 .hotspot-form{
     font-family:'SourceSans3-Semibold';
     position: absolute;
-    text-wrap: nowrap;
    
-    input[type=text] {
-        font-family:'SourceSans3';
-        font-size:1vw;
-        width:72vw;
-        height:3.7vw;
-    }
-    
+   
     textarea {
         font-family:'SourceSans3';
         font-size:1vw;
-        width:73vw;
-        height:4vw;
+        width:72vw;
+        height:3vw;
      }
 }
 .hotspot-fullscreen {
