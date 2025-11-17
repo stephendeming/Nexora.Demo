@@ -7,16 +7,10 @@
         <script src="js/footer.js"></script>
         <script src="js/nav-creator.js"></script>
         <title>Nexora</title>
-
-       <script>
-        $(function () {
-            $('.go-to-next-page').on('click', function () {
-                localStorage.setItem('scrollPos', $(window).scrollTop());
-                window.location = 'pageB.html';
-            });
-        });
-        </script>
-
+        <style>
+            body{opacity:0;transition:opacity 0.2s}html{scroll-behavior:auto}
+        </style>
+        
     </head>
     
 
@@ -38,7 +32,7 @@
                     
                     <img src="img/creator-content-ready-1.svg">
                     <!--edit icon-->
-                    <a href="creator-content-ready-2.html">
+                    <a data-scroll-link href="creator-content-ready-2.html">
                         <svg class="hotspot-fullscreen hs-m" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3 17.2501V21.0001H6.75L17.81 9.94006L14.06 6.19006L3 17.2501ZM20.71 7.04006C21.1 6.65006 21.1 6.02006 20.71 5.63006L18.37 3.29006C17.98 2.90006 17.35 2.90006 16.96 3.29006L15.13 5.12006L18.88 8.87006L20.71 7.04006Z"/>
                         </svg>
@@ -54,6 +48,15 @@
     
     <div id="footer-container"></div>
     <script src="js/inject.js"></script>
+    <script>
+        $(function(){
+        var r=function(){var s=localStorage.getItem("scrollPos");if(s!==null)$(window).scrollTop(parseInt(s,10));$("body").css("opacity",1)},
+            i=$("img,svg"),l=0,t=i.length;
+        if(t===0)r();else{i.each(function(){if(this.complete)l++;else $(this).on("load error",function(){l++;if(l===t)r()});});if(l===t)r();}
+        $("[data-scroll-link]").on("click",function(e){e.preventDefault();localStorage.setItem("scrollPos",$(window).scrollTop());window.location.href=$(this).attr("href")});
+        });
+    </script>
+
 
 </body>
 

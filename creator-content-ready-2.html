@@ -6,16 +6,9 @@
         <script src="js/header.js"></script> 
         <script src="js/footer.js"></script>
         <title>Nexora</title>
-
-        <script>
-        $(window).on('load', function () {
-            const pos = localStorage.getItem('scrollPos');
-            if (pos !== null) {
-                $(window).scrollTop(pos);
-            }
-        });
-        </script>
-
+        <style>
+            body{opacity:0;transition:opacity 0.2s}html{scroll-behavior:auto}
+        </style>
     </head>
     
 
@@ -23,7 +16,7 @@
 
     <div class="hotspots">
         <!--overlay-->
-        <a href="creator-content-ready-3.html"><img class="hotspot-fullscreen hs-n" src="img/overlay-beginner.svg" /></a>
+        <a data-scroll-link href="creator-content-ready-3.html"><img class="hotspot-fullscreen hs-n" src="img/overlay-beginner.svg" /></a>
     </div>
 
     <div id="header-container"></div>
@@ -93,6 +86,14 @@
     
     <div id="footer-container"></div>
     <script src="js/inject.js"></script>
+    <script>
+        $(function(){
+        var r=function(){var s=localStorage.getItem("scrollPos");if(s!==null)$(window).scrollTop(parseInt(s,10));$("body").css("opacity",1)},
+            i=$("img,svg"),l=0,t=i.length;
+        if(t===0)r();else{i.each(function(){if(this.complete)l++;else $(this).on("load error",function(){l++;if(l===t)r()});});if(l===t)r();}
+        $("[data-scroll-link]").on("click",function(e){e.preventDefault();localStorage.setItem("scrollPos",$(window).scrollTop());window.location.href=$(this).attr("href")});
+        });
+    </script>
 
 </body>
 

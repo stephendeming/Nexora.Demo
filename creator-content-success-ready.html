@@ -2,12 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/jquery-3.7.1.min.js"></script>
         <title>Nexora</title>
     </head>
 
 <body>
     <div class="hotspots">
-        <a href="creator-content-ready-1.html" class="hotspot-fullscreen"  id="hs-i2"><img src="img/creator-content-success-overlay.svg" /></a>
+        <a data-scroll-link href="creator-content-ready-1.html" class="hotspot-fullscreen"  id="hs-i2"><img src="img/creator-content-success-overlay.svg" /></a>
     </div>
     <header id="header">
         <div class="header-container">
@@ -94,6 +95,14 @@
     
     <div id="footer-container"></div>
     <script src="js/inject.js"></script>
+    <script>
+        $(function(){
+        var r=function(){var s=localStorage.getItem("scrollPos");if(s!==null)$(window).scrollTop(parseInt(s,10));$("body").css("opacity",1)},
+            i=$("img,svg"),l=0,t=i.length;
+        if(t===0)r();else{i.each(function(){if(this.complete)l++;else $(this).on("load error",function(){l++;if(l===t)r()});});if(l===t)r();}
+        $("[data-scroll-link]").on("click",function(e){e.preventDefault();localStorage.setItem("scrollPos",$(window).scrollTop());window.location.href=$(this).attr("href")});
+        });
+    </script>
 
 </body>
 
