@@ -42,12 +42,11 @@
     <script src="js/inject.js"></script>
     <script>
        $(document).ready(function() {
-
-      $('#nextBtn5').on('click', function(e) {
-        e.preventDefault();
-        window.location.href = 'scenario-1.html'; // Replace with your file
-      });
-    });
+            $('#nextBtn5').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'scenario-1.html'; // Replace with your file
+            });
+        });
         window.addEventListener('beforeunload', function() {
             sessionStorage.setItem('scrollPos', window.scrollY);
         });
@@ -56,11 +55,11 @@
         window.addEventListener('load', function() {
             const scrollPos = sessionStorage.getItem('scrollPos');
             if (scrollPos !== null) {
-            window.scrollTo({
-                top: parseInt(scrollPos, 10),
-                left: 0,
-                behavior: 'instant' // <— instantly sets position, no scroll animation
-            });
+                window.scrollTo({
+                    top: parseInt(scrollPos, 10),
+                    left: 0,
+                    behavior: 'instant' // <— instantly sets position, no scroll animation
+                });
             }
         });
     </script>
