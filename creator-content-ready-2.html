@@ -6,6 +6,16 @@
         <script src="js/header.js"></script> 
         <script src="js/footer.js"></script>
         <title>Nexora</title>
+
+        <script>
+        $(window).on('load', function () {
+            const pos = localStorage.getItem('scrollPos');
+            if (pos !== null) {
+                $(window).scrollTop(pos);
+            }
+        });
+        </script>
+
     </head>
     
 

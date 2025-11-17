@@ -7,6 +7,16 @@
         <script src="js/footer.js"></script>
         <script src="js/nav-creator.js"></script>
         <title>Nexora</title>
+
+       <script>
+        $(function () {
+            $('.go-to-next-page').on('click', function () {
+                localStorage.setItem('scrollPos', $(window).scrollTop());
+                window.location = 'pageB.html';
+            });
+        });
+        </script>
+
     </head>
     
 
