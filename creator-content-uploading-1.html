@@ -15,12 +15,26 @@
             }, delay);
             });
         </script>
+        <!--preloader-->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            const delay = 5000; // 5 seconds before redirect
+
+            // Simulate loading time or preload images if needed
+            setTimeout(function() {
+                $('#preloader').fadeOut(600, function() {
+                // Redirect after fade
+                window.location.href = "page2.html";
+                });
+            }, delay);
+            });
+        </script>
+        
     </head>
 
 <body>
-    <div class="hotspots">
-        <a href="creator-content-upload-finished-1.html" class="hotspot-fullscreen"  id="hs-i"><img src="img/creator-content-uploading.svg" /></a>
-    </div>
+    
     <div id="header-container"></div>
 
     <div class="content-wrapper">
@@ -68,8 +82,12 @@
             <div class="back"><a href="creator-home-1.html">Back to Content Hub</a></div>
             
             <div class="page-content">
-                <div>
-                    <a href="creator-file-select-1.html"><img src="img/content-hub-1-page.svg"></a>
+                <div class="hotspots">
+                    <div id="preloader">
+                        <div class="spinner"></div>
+                    </div>
+                    <a href="creator-content-success-ready.html"><img src="img/creator-content-loading.svg"></a>
+                    <!--<a href="#"class="hotspot" id="hs-j">Next</a>-->
                     
                 </div> 
             </div>
