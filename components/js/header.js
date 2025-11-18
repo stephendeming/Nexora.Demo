@@ -3,7 +3,7 @@ const headerHTML = `
         <div class="header-container">
             <div class="header-title">
                 <h2><span>
-                        <a href="index.html"><img src="img/logo-white.svg" width="174" /></a>
+                        <a href="../index.html"><img src="img/logo-white.svg" width="174" /></a>
                     </span>
                 </h2>
             </div>
