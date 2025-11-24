@@ -12,6 +12,9 @@ body{
     font-family: 'SourceSans3', sans-serif;
     margin:0;
     padding:0;
+    /* visibility: hidden; */
+    /* opacity: 0;
+    transition: opacity 0.15s ease; */
 }
 
 html {
@@ -277,8 +280,29 @@ div.home-creator {
         color: white;
   }
 }
+.hs-c {
+    top: 70%;
+    left: 85%;
+    align-items: center;
+    
+    &:hover{
+        background-color: var(--accent-blue);
+        color: white;
+  }
+}
 /* Back to skill packet main button */
 #hs-d {
+    top: 50.8%;
+    left: 35%;
+    align-items: center;
+    
+    &:hover{
+        background-color: var(--accent-blue); 
+        color: white;
+        border-color: var(--accent-blue);
+    }
+}
+.hs-d {
     top: 50.8%;
     left: 35%;
     align-items: center;

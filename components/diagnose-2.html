@@ -5,6 +5,16 @@
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/header.js"></script> 
         <script src="js/footer.js"></script>
+        <script>
+    const pos = sessionStorage.getItem('scrollPos');
+    if (pos !== null) {
+      window.scrollTo(0, parseInt(pos, 10));
+    }
+
+    window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('scrollPos', window.scrollY);
+        });
+  </script>
         <title>Nexora</title>
     </head>
     
@@ -29,7 +39,7 @@
             <div class="page-content">
                 <div class="hotspots">
                     <img src="img/diagnose-2-page.svg">
-                    <a href="diagnose-3.html" class="hotspot" id="hs-c">SUBMIT</a>
+                   <div id="submitBtn" class="hotspot hs-c">SUBMIT</div>
                 </div> 
                
             </div>
@@ -40,6 +50,30 @@
     
     <div id="footer-container"></div>
     <script src="js/inject.js"></script>
+    <script>
+       $(document).ready(function() {
+            $('#submitBtn').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'diagnose-3.html'; // Replace with your file
+            });
+        });
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('scrollPos', window.scrollY);
+        });
+
+        // Instantly restore scroll position on load
+        window.addEventListener('load', function() {
+            const scrollPos = sessionStorage.getItem('scrollPos');
+            if (scrollPos !== null) {
+                window.scrollTo({
+                    top: parseInt(scrollPos, 10),
+                    left: 0,
+                    behavior: 'instant' // <— instantly sets position, no scroll animation
+                });
+                
+            }
+        });
+    </script>
 
 </body>
 
